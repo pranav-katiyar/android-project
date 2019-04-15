@@ -120,7 +120,7 @@ public class Diginotes extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_citech);
+        setContentView(R.layout.activity_diginotes);
         webView5 = (WebView) findViewById(R.id.wv);
 
         myswipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe);
@@ -145,7 +145,7 @@ public class Diginotes extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), DUMYONE.class);
+                Intent i = new Intent(getApplicationContext(), DummyOne.class);
                 startActivity(i);
             }
         });
@@ -153,7 +153,7 @@ public class Diginotes extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), DUMYTWO.class);
+                Intent i = new Intent(getApplicationContext(), DummyTwo.class);
                 startActivity(i);
             }
         });

@@ -1,6 +1,5 @@
 package com.citech.easyaccess;
 
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -8,12 +7,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Environment;
 import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -32,8 +31,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
-public class DUMYONE extends AppCompatActivity {
+public class DummyOne extends AppCompatActivity {
     WebView webView5;
     int x = 1;
     SwipeRefreshLayout myswipeRefreshLayout;
@@ -120,7 +118,7 @@ public class DUMYONE extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_citech);
+        setContentView(R.layout.activity_dummy_one);
         webView5 = (WebView) findViewById(R.id.wv);
 
         myswipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe);
@@ -130,15 +128,13 @@ public class DUMYONE extends AppCompatActivity {
         Button button3 = (Button) findViewById(R.id.b3);
         Button button4 = (Button) findViewById(R.id.b4);
 
-        url = "http://www.DUMYONE.in/";
-
+        url = "http://cambridge.edu.in/";
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Citech.class);
                 startActivity(i);
-
             }
         });
 
@@ -147,13 +143,15 @@ public class DUMYONE extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Diginotes.class);
                 startActivity(i);
+
             }
         });
+
 
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), DUMYTWO.class);
+                Intent i = new Intent(getApplicationContext(), DummyTwo.class);
                 startActivity(i);
             }
         });
@@ -198,16 +196,16 @@ public class DUMYONE extends AppCompatActivity {
         webView5.getSettings().setSupportMultipleWindows(true);
         //webView5.loadUrl("https://www.instagram.com");
         webView5.setWebChromeClient(new ChromeClient());
-        if (CheckNetwork.isInternetAvailable(DUMYONE.this)) //returns true if internet available
+        if (DummyOne.CheckNetwork.isInternetAvailable(DummyOne.this)) //returns true if internet available
         {
 
             //do something. loadwebview.
             j = 1;
             webView5.loadUrl(url);
         } else {
-            Toast.makeText(DUMYONE.this, "No Internet Connection", 1000).show();
+            Toast.makeText(DummyOne.this, "No Internet Connection", 1000).show();
             //webView.loadUrl("file:///android_asset/error.html");
-            DUMYONE.this.myswipeRefreshLayout.setRefreshing(false);
+            DummyOne.this.myswipeRefreshLayout.setRefreshing(false);
             progressBar.setVisibility(ProgressBar.GONE);
         }
 
@@ -216,7 +214,7 @@ public class DUMYONE extends AppCompatActivity {
             public void onRefresh() {
 
 
-                if (CheckNetwork.isInternetAvailable(DUMYONE.this)) //returns true if internet available
+                if (Citech.CheckNetwork.isInternetAvailable(DummyOne.this)) //returns true if internet available
                 {
 
                     //do something. loadwebview.
@@ -233,12 +231,12 @@ public class DUMYONE extends AppCompatActivity {
                     }
 
 
-                    DUMYONE.this.myswipeRefreshLayout.setRefreshing(false);
+                    DummyOne.this.myswipeRefreshLayout.setRefreshing(false);
 
 
                 } else {
-                    Toast.makeText(DUMYONE.this, "No Internet Connection", 3000).show();
-                    DUMYONE.this.myswipeRefreshLayout.setRefreshing(false);
+                    Toast.makeText(DummyOne.this, "No Internet Connection", 3000).show();
+                    DummyOne.this.myswipeRefreshLayout.setRefreshing(false);
                     progressBar.setVisibility(ProgressBar.GONE);
 
                 }
@@ -420,7 +418,7 @@ public class DUMYONE extends AppCompatActivity {
 
     // to check internet
     public static class CheckNetwork {
-        private static final String TAG = CheckNetwork.class.getSimpleName();
+        private static final String TAG = Citech.CheckNetwork.class.getSimpleName();
 
         public static boolean isInternetAvailable(Context context) {
             NetworkInfo info = (NetworkInfo) ((ConnectivityManager)
@@ -443,5 +441,3 @@ public class DUMYONE extends AppCompatActivity {
     }
 
 }
-
-

@@ -145,7 +145,7 @@ public class Citech extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), DUMYONE.class);
+                Intent i = new Intent(getApplicationContext(), DummyOne.class);
                 startActivity(i);
             }
         });
@@ -153,7 +153,7 @@ public class Citech extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), DUMYTWO.class);
+                Intent i = new Intent(getApplicationContext(), DummyTwo.class);
                 startActivity(i);
             }
         });
