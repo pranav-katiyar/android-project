@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Citech"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        app:layout_constraintHeight_percent="0.94"
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintHeight_percent="0.95">
+
+
+            <WebView
+                android:id="@+id/wv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#fff"
+                android:overScrollMode="ifContentScrolls"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.94"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#0d080807"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toEndOf="@+id/swipe">
+
+            <Button
+                android:id="@+id/b1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#fff"
+                android:text="Cambridge"
+                android:textColor="#000"
+                app:layout_constraintHeight_percent="0.9999"
+                app:layout_constraintStart_toStartOf="@id/linearLayout2"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <Button
+                android:id="@+id/b2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#000"
+                android:text="Diginotes"
+                android:textColor="#fff"
+                app:layout_constraintHeight_percent="0.9999"
+                app:layout_constraintStart_toEndOf="@id/b1"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <Button
+                android:id="@+id/b3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#000"
+                android:text="Dummy1"
+                android:textColor="#fff"
+                app:layout_constraintHeight_percent="0.9999"
+                app:layout_constraintStart_toEndOf="@id/b2"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <Button
+                android:id="@+id/b4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#000"
+                android:text="Dummy2"
+                android:textColor="#fff"
+                app:layout_constraintHeight_percent="0.9999"
+                app:layout_constraintStart_toEndOf="@id/b3"
+                app:layout_constraintWidth_percent="0.25" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="#d60b92"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="35sp"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
