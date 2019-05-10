@@ -145,7 +145,7 @@ public class Diginotes extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), DummyOne.class);
+                Intent i = new Intent(getApplicationContext(), Linkedin.class);
                 startActivity(i);
             }
         });
@@ -153,7 +153,7 @@ public class Diginotes extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), DummyTwo.class);
+                Intent i = new Intent(getApplicationContext(), VTU.class);
                 startActivity(i);
             }
         });

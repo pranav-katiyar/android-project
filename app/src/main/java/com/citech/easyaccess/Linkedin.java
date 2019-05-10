@@ -31,7 +31,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class DummyOne extends AppCompatActivity {
+public class Linkedin extends AppCompatActivity {
     WebView webView5;
     int x = 1;
     SwipeRefreshLayout myswipeRefreshLayout;
@@ -118,7 +118,7 @@ public class DummyOne extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dummy_one);
+        setContentView(R.layout.activity_linkedin);
         webView5 = (WebView) findViewById(R.id.wv);
 
         myswipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe);
@@ -128,7 +128,7 @@ public class DummyOne extends AppCompatActivity {
         Button button3 = (Button) findViewById(R.id.b3);
         Button button4 = (Button) findViewById(R.id.b4);
 
-        url = "http://cambridge.edu.in/";
+        url = "https://linkedin.com/";
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,7 +151,7 @@ public class DummyOne extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), DummyTwo.class);
+                Intent i = new Intent(getApplicationContext(), VTU.class);
                 startActivity(i);
             }
         });
@@ -196,16 +196,16 @@ public class DummyOne extends AppCompatActivity {
         webView5.getSettings().setSupportMultipleWindows(true);
         //webView5.loadUrl("https://www.instagram.com");
         webView5.setWebChromeClient(new ChromeClient());
-        if (DummyOne.CheckNetwork.isInternetAvailable(DummyOne.this)) //returns true if internet available
+        if (Linkedin.CheckNetwork.isInternetAvailable(Linkedin.this)) //returns true if internet available
         {
 
             //do something. loadwebview.
             j = 1;
             webView5.loadUrl(url);
         } else {
-            Toast.makeText(DummyOne.this, "No Internet Connection", 1000).show();
+            Toast.makeText(Linkedin.this, "No Internet Connection", 1000).show();
             //webView.loadUrl("file:///android_asset/error.html");
-            DummyOne.this.myswipeRefreshLayout.setRefreshing(false);
+            Linkedin.this.myswipeRefreshLayout.setRefreshing(false);
             progressBar.setVisibility(ProgressBar.GONE);
         }
 
@@ -214,7 +214,7 @@ public class DummyOne extends AppCompatActivity {
             public void onRefresh() {
 
 
-                if (Citech.CheckNetwork.isInternetAvailable(DummyOne.this)) //returns true if internet available
+                if (Citech.CheckNetwork.isInternetAvailable(Linkedin.this)) //returns true if internet available
                 {
 
                     //do something. loadwebview.
@@ -231,12 +231,12 @@ public class DummyOne extends AppCompatActivity {
                     }
 
 
-                    DummyOne.this.myswipeRefreshLayout.setRefreshing(false);
+                    Linkedin.this.myswipeRefreshLayout.setRefreshing(false);
 
 
                 } else {
-                    Toast.makeText(DummyOne.this, "No Internet Connection", 3000).show();
-                    DummyOne.this.myswipeRefreshLayout.setRefreshing(false);
+                    Toast.makeText(Linkedin.this, "No Internet Connection", 3000).show();
+                    Linkedin.this.myswipeRefreshLayout.setRefreshing(false);
                     progressBar.setVisibility(ProgressBar.GONE);
 
                 }

@@ -20,8 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DummyTwo"></activity>
-        <activity android:name=".DummyOne" />
+        <activity android:name=".VTU"></activity>
+        <activity android:name=".Linkedin" />
         <activity android:name=".DUMY2" />
         <activity android:name=".DUMY1" />
         <activity android:name=".Diginotes" />
